@@ -1,0 +1,5 @@
+const genres =[
+
+]
+export { genres };
+
