@@ -1,28 +1,11 @@
 import { genres } from "./genre";
 import{ DOMSelectors} from "./DOM";
+import {click} from "./search";
 //import "regenerator-runtime/runtime";
 
 
-const query = ` https://jikan.moe/`;
+const query = `"https://api.jikan.moe/v3/search/anime?q=&page=1&sort=desc&order_by=members&genre=1&genre=4`;
 
-
-const NextPage = async function() {
-    DOMSelectors.nextButton.addEventListener("click", function (e) {
-      DOMSelectors.grid.innerHTML = "";
-      offset += 30;
-      defaultPage();
-    });
-    DOMSelectors.previousButton.addEventListener("click", function (e) {
-      if (offset == 0) {
-        offset = 0;
-      } else {
-        DOMSelectors.grid.innerHTML = "";
-        offset -= 30;
-        defaultPage();
-      }
-    });
- 
-}
 
 const init = async function () {
     try {
