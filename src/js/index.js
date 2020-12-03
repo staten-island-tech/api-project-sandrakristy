@@ -4,7 +4,7 @@ import {click} from "./search";
 //import "regenerator-runtime/runtime";
 
 
-const query = `"https://api.jikan.moe/v3/search/anime`;
+const query = `"https://api.jikan.moe/`;
 
 
 const init = async function () {
