@@ -21,20 +21,7 @@ const NextPage = async function() {
         defaultPage();
       }
     });
-    DOMSelectors.nextButtonB.addEventListener("click", function (e) {
-      DOMSelectors.grid.innerHTML = "";
-      offset += 30;
-      defaultPage();
-    });
-    DOMSelectors.previousButtonB.addEventListener("click", function (e) {
-      if (offset == 0) {
-        offset = 0;
-      } else {
-        DOMSelectors.grid.innerHTML = "";
-        offset -= 30;
-        defaultPage();
-      }
-    });
+ 
 }
 
 const init = async function () {
@@ -52,11 +39,11 @@ const init = async function () {
     //});
 
   
-      data.results.forEach((movie) => {
+      data.results.forEach((anime) => {
         let genreArr = [];
         const addGenre = function () {
           genres.forEach((element) => {
-            if (movie.genre_ids.includes(element.id)) {
+            if (anime.genre_ids.includes(element.id)) {
               genreArr.push(element.name);
               return genreArr;
             }
@@ -65,25 +52,25 @@ const init = async function () {
         addGenre();
         DOMSelectors.grid.insertAdjacentHTML(
           "beforeend",
-          `<div class="movie-card">
-        <div class="movie-card-front">
+          `<div class="anime-card">
+        <div class="anime-card-front">
           <img
-            src="https://image.tmdb.org/t/p/w300/${movie.poster_path}"
+            src="https://image.tmdb.org/t/p/w300/${anime.poster_path}"
             alt=""
             class="poster"
           />
         </div>
-        <div class="movie-card-back">
-          <h3 class="movie-card-header">${movie.original_title}</h3>
+        <div class="anime-card-back">
+          <h3 class="anime-card-header">${anime.original_title}</h3>
           <div class="score-box">
             <p class="user-score">Community Score</p>
-            <p class="user-score">${movie.vote_average}</p>
+            <p class="user-score">${anime.vote_average}</p>
           </div>
           <div class="release-box">
             <p class="release-date">Released</p>
-            <p class="release-date">${movie.release_date}</p>
+            <p class="release-date">${anime.release_date}</p>
           </div>
-          <div class="movie-genres">
+          <div class="anime-genres">
             <div>${genreArr}</div>
           </div>
         </div>
