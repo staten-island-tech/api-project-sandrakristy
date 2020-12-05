@@ -15,7 +15,9 @@ const init = async function () {
 
     animeList.forEach((anime) => {
        //console.log(anime.title)
-      DOMSelectors.grid.insertAdjacentHTML("beforebegin",
+
+      DOMSelectors.movieGrid.insertAdjacentHTML("beforebegin",
+
       `
       <div class="movie-card">
       <div class="movie-card-front">
