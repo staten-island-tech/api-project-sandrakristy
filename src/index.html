@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anime</title>
+    <title>Anime/title>
     <link rel="stylesheet" href="../src/scss/style.scss">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     
@@ -13,17 +13,17 @@
 <body>
     <h1 class="header">Anime</h1>
     <form class="search">
-        <label for="search">Search an anime here!</label>
-        <input
-          id="searchQuery"
-          type="text"
-          placeholder="search..."
-          required
-        />
-        <button id="search-submit" type="submit">Go</button>
+      <label for="search">Search an anime here!</label>
+      <input
+        id="searchQuery"
+        type="text"
+        placeholder="search..."
+        required
+      />
+      <button id="search-submit" type="submit">Go</button>
     </form>
-    <h2 class="top-rated">Search an anime!</h2>
-    <section class="anime-grid">
+    <h2 class="top-rated">Our Top Rated Animes</h2>
+    <section class="movie-grid">
       <!--  <div class="movie-card">
         <div class="movie-card-front">
           <img
@@ -50,7 +50,10 @@
         </div>
       </div> -->
     </section>
-
+    <div class="buttons">
+      <button class="btn-prev">Go Back</button> 
+      <button class="btn-next">See More</button>
+    </div>
     <script src="../src/js/index.js"></script>
 </body>
 

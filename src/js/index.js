@@ -1,4 +1,5 @@
 import{ DOMSelectors} from "./DOM";
+//import {listen} from "./search";
 
 
 const query = `https://api.jikan.moe/v3/search/anime?q=anime`;
@@ -13,8 +14,8 @@ const init = async function () {
     console.log(animeList);
 
     animeList.forEach((anime) => {
-       console.log(anime.title)
-      DOMSelectors.movieGrid.insertAdjacentHTML("beforebegin",
+       //console.log(anime.title)
+      DOMSelectors.grid.insertAdjacentHTML("beforebegin",
       `
       <div class="movie-card">
       <div class="movie-card-front">
