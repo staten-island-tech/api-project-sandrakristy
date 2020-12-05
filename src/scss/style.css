@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap");
 html {
   height: 100%;
 }
 
 body {
-  background-color: #FEEAFA;
-  color: #DEE2FF;
+  background-color: #f7ede2;
+  color: #84a59d;
+  font-family: 'Kirang Haerang', cursive;
 }
 /*# sourceMappingURL=style.css.map */
