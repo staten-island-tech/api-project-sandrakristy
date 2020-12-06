@@ -3,7 +3,7 @@ const DOMSelectors = {
     searchArea: document.getElementById("search-area"),
 
     //grid: document.querySelector(".anime-grid"),
-    movieGrid: document.querySelector(".movie-grid"),
+    grid: document.querySelector(".anime-grid"),
     //searchForm: document.getElementById("search-form"),
     //searchArea: document.getElementById("search-area"),
 
