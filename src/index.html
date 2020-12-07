@@ -12,18 +12,18 @@
 
 <body>
     <h1 class="header">Anime</h1>
-    <form class="search">
-      <label for="search">Search an anime here!</label>
+    <div id="searchWrapper">
       <input
-        id="searchQuery"
-        type="text"
-        placeholder="search..."
-        required
+          type="text"
+          name="searchBar"
+          id="searchBar"
+          placeholder="search for anime!"
       />
-      <button id="search-submit" type="submit">Go</button>
-    </form>
+     </div>
+  <ul id="animeSearch"></ul>
+
     <h2 class="top-rated">Our Top Rated Animes</h2>
-    <section class="movie-grid">
+    <section class="anime-grid">
       <!--  <div class="movie-card">
         <div class="movie-card-front">
           <img

@@ -1,9 +1,32 @@
 import{ DOMSelectors} from "./DOM";
 //import {listen} from "./search";
 
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('keyup', (e) => {
 
-const query = `https://api.jikan.moe/v3/search/anime?q=anime`;
-console.log (query);
+  console.log(e.target.value);
+});
+const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
+
+let animeList = [];
+
+searchBar.addEventListener('keyup', (e) => {
+    let searchString = e.target.value.toLowerCase();
+    
+    
+  
+    init(searchString="");
+
+  
+    if ("") {
+      console.log(animeList)
+    } else {
+      console.log(query);
+    }
+  });
+
+
+
 
 
 const init = async function () {
@@ -16,7 +39,7 @@ const init = async function () {
     animeList.forEach((anime) => {
        //console.log(anime.title)
 
-      DOMSelectors.movieGrid.insertAdjacentHTML("beforebegin",
+      DOMSelectors.animeGrid.insertAdjacentHTML("beforebegin",
 
       `
       <div class="movie-card">
@@ -50,6 +73,11 @@ const init = async function () {
   }
 };
 
+
+
+
+
 init();
+
 
 
