@@ -6,34 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anime</title>
     <link rel="stylesheet" href="../src/scss/style.scss">
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap'" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300&family=PT+Serif:ital@1&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     
 </head>
 
 <body>
     <h1 class="header">Anime</h1>
-    <div id="searchWrapper">
+    <form class="search">
+      <label for="search">Search an anime here!</label>
       <input
-          type="text"
-          name="searchBar"
-          id="searchBar"
-          placeholder="search for anime!"
+        id="searchQuery"
+        type="text"
+        placeholder="search..."
+        required
       />
-     </div>
-  <ul id="animeSearch"></ul>
-
+      <button id="search-submit" type="submit">Go</button>
+    </form>
     <h2 class="top-rated">Our Top Rated Animes</h2>
     <section class="anime-grid">
-      <!--  <div class="movie-card">
-        <div class="movie-card-front">
+      <!--  <div class="anime-card">
+        <div class="anime-card-front">
           <img
             src="https://image.tmdb.org/t/p/w300/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
             alt=""
             class="poster"
           />
         </div>
-        <div class="movie-card-back">
-          <h3 class="movie-card-header">The Dark Knight</h3>
+        <div class="anime-card-back">
+          <h3 class="animecard-header">The Dark Knight</h3>
           <div class="score-box">
             <p class="user-score">Community Score</p>
             <p class="user-score">8.4</p>
@@ -42,9 +44,9 @@
             <p class="release-date">Released</p>
             <p class="release-date">2020-06-12</p>
           </div>
-          <div class="movie-genres">
-            <li class="movie-genre">Sci-Fi</li>
-            <li class="movie-genre">Fantasy</li>
+          <div class="anime-genres">
+            <li class="anime-genre">Sci-Fi</li>
+            <li class="anime-genre">Fantasy</li>
             <li class="movie-genre">Horror</li>
           </div>
         </div>

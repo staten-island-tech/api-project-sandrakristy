@@ -1,27 +1,18 @@
 import{ DOMSelectors} from "./DOM";
 //import {listen} from "./search";
 
-const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keyup', (e) => {
-
-  console.log(e.target.value);
-});
-const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
-
-let animeList = [];
-
-searchBar.addEventListener('keyup', (e) => {
-    let searchString = e.target.value.toLowerCase();
+    const searchString = e.target.value.toLowerCase();
+    const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
     
-    
-  
     init(searchString="");
 
   
     if ("") {
-      console.log(animeList)
+      console.log($userSearch);
+      userSearch= anime;
     } else {
-      console.log(query);
+      userSearch= searchBar.value;
     }
   });
 
@@ -31,6 +22,7 @@ searchBar.addEventListener('keyup', (e) => {
 
 const init = async function () {
   try {
+    const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
     const response = await fetch(query);
     const data = await response.json();
     const animeList = data.results;
@@ -72,7 +64,6 @@ const init = async function () {
     console.log(error);
   }
 };
-
 
 
 
