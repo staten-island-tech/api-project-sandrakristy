@@ -40,16 +40,16 @@ const init = async function (searchString="") {
       DOMSelectors.animeGrid.insertAdjacentHTML("beforeend",
 
       `
-      <div class="movie-card">
-      <div class="movie-card-front">
+      <div class="anime-card">
+      <div class="anime-card-front">
         <img
           src="${anime.image_url}"
           alt=""
           class="poster"
         />
       </div>
-      <div class="movie-card-back">
-        <h3 class="movie-card-header">${anime.title}</h3>
+      <div class="anime-card-back">
+        <h3 class="anime-card-header">${anime.title}</h3>
         <div class="synopsis-box">
         <p class="synopsis">${anime.synopsis}</p>
       </div>
