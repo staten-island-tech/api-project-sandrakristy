@@ -7,23 +7,48 @@ body {
     padding: 0;
     margin: 0;
     font-size: 62.5%;
-    background-color: $almond;
-    color: $teal;
+    background-color: $peach;
     font-family: 'Kirang Haerang', cursive;
     font-weight: 500;
 }
 
 
 .header {
-  font-size: 5.2rem;
+  font-size: 12.2rem;
   margin: 3rem auto;
   text-align: center;
+  color:$rose;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header:hover {
+  opacity: 0.6;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .top-rated {
   margin: 1rem auto 2rem auto;
   text-align: center;
   font-size: 3.8rem;
+  color: $teal;
+  cursor: pointer;
+  
 }
 
 .anime-grid {
@@ -31,10 +56,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90vw;
-    background-color: white;
     margin: 1rem auto;
     padding: 3rem auto;
     align-items: center;
+   
 }
 
 .anime-card {
@@ -43,6 +68,7 @@ body {
   margin: 0 auto;
   position: relative;
   margin: 2rem auto;
+  
 }
 .anime-card-front {
   position: absolute;
@@ -69,9 +95,10 @@ body {
   justify-content: space-around;
   align-items: center;
   color: white;
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: $rose;
   width: 100%;
   height: 100%;
+  
 }
 .anime-card-header {
   font-size: 2.4rem;
@@ -130,16 +157,20 @@ body {
 }
 
 .search{
-    font-size:2.5rem;
+    font-size:3.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: $white;
 }
 
-.buttons{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width:30vw;
-  height:15vh;
+input[type=text] {
+  width: 240px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  height: 3rem;
+  cursor: pointer;
+}
+input[type=text]:focus {
+  width: 50%;
 }
