@@ -31,10 +31,13 @@ const init = async function (searchString="") {
     const animeList = data.results;
     console.log(animeList);
 
+
+    DOMSelectors.animeGrid.innerHTML="";
+
     animeList.forEach((anime) => {
        //console.log(anime.title)
 
-      DOMSelectors.animeGrid.insertAdjacentHTML("beforebegin",
+      DOMSelectors.animeGrid.insertAdjacentHTML("beforeend",
 
       `
       <div class="movie-card">
@@ -59,8 +62,7 @@ const init = async function (searchString="") {
       </div>
     </div>`
       )
-    }
-
+    }  
     )
 
   } catch (error) {
@@ -69,3 +71,4 @@ const init = async function (searchString="") {
 };
 
 init();
+
