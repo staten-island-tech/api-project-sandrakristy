@@ -1,37 +1,43 @@
 import{ DOMSelectors} from "./DOM";
 //import {listen} from "./search";
 
-searchBar.addEventListener('keyup', (e) => {
+DOMSelectors.searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
-    const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
+    //const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
     
-    init(searchString="");
-
+    init(searchString);
   
-    if ("") {
-      console.log($userSearch);
-      userSearch= anime;
-    } else {
-      userSearch= searchBar.value;
-    }
+    // if ("") {
+    //   console.log($userSearch);
+    //   userSearch= anime;
+    // } else {
+    //   userSearch= searchBar.value;
+    // }
   });
 
 
-
-
-
-const init = async function () {
+const init = async function (searchString="") {
   try {
-    const query = `https://api.jikan.moe/v3/search/anime?q=${searchString}`;
+    let userSearch;
+    if (searchString==="") {
+      userSearch= 'anime';
+    } else {
+      userSearch = searchString;
+    }
+    const query = `https://api.jikan.moe/v3/search/anime?q=${userSearch}`;
+
     const response = await fetch(query);
     const data = await response.json();
     const animeList = data.results;
     console.log(animeList);
 
+
+    DOMSelectors.animeGrid.innerHTML="";
+
     animeList.forEach((anime) => {
        //console.log(anime.title)
 
-      DOMSelectors.animeGrid.insertAdjacentHTML("beforebegin",
+      DOMSelectors.animeGrid.insertAdjacentHTML("beforeend",
 
       `
       <div class="movie-card">
@@ -56,8 +62,7 @@ const init = async function () {
       </div>
     </div>`
       )
-    }
-
+    }  
     )
 
   } catch (error) {
@@ -65,10 +70,5 @@ const init = async function () {
   }
 };
 
-
-
-
 init();
-
-
 
